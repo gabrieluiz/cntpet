@@ -1,0 +1,16 @@
+.tab-navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .tab-navigation li {
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .tab-navigation .active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+  }
+  

@@ -1,0 +1,60 @@
+/* Estilos para o formulário de voluntários */
+.voluntario-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.voluntario-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.voluntario-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.voluntario-form button:hover {
+  background-color: #45a049;
+}
+
+/* Listagem de voluntários */
+.voluntario-list {
+  margin-top: 30px;
+}
+
+.voluntario-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.voluntario-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.voluntario-list button {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.voluntario-list button:hover {
+  background-color: #e53935;
+}

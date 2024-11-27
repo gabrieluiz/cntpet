@@ -1,0 +1,68 @@
+/* Estilos gerais do header */
+.header {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 2px -2px gray;
+  border-radius: 10px; /* Bordas arredondadas */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Largura máxima para centralizar */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  margin-right: 10px; /* Espaçamento entre logo e título */
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+/* Links de navegação */
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s, border-color 0.3s; /* Transição suave para o hover e a aba ativa */
+}
+
+/* Cor de hover nos links */
+.header-nav a:hover {
+  color: #00a1f1; /* Cor de hover */
+}
+
+/* Indica a aba ativa */
+.header-nav a.active {
+  border-bottom: 2px solid #00a1f1; /* Linha inferior para indicar a aba ativa */
+  color: #00a1f1; /* A cor da aba ativa pode ser a mesma do hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Altera a direção em telas menores */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .header-nav {
+    flex-direction: column; /* Os links ficam em coluna */
+    gap: 10px; /* Espaçamento reduzido */
+  }
+
+  .header-logo img {
+    width: 80px; /* Reduz a logo em dispositivos móveis */
+  }
+}

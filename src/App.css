@@ -1,0 +1,96 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo do Header */
+.header {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px; /* Bordas arredondadas da imagem */
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #61dafb;
+}
+
+.header-nav a.active {
+  border-bottom: 2px solid #61dafb;
+}
+
+/* Área de conteúdo principal */
+.content-area {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header-nav {
+    gap: 15px;
+  }
+
+  .content-area {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

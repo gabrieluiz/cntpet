@@ -1,0 +1,98 @@
+/* Estilo principal */
+.nos-conheca-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nos-conheca-header {
+  background-color: #E0F7FA;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.nos-conheca-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nos-conheca-header-image {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.nos-conheca-header-text {
+  text-align: center;
+}
+
+.nos-conheca-header-text h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.nos-conheca-header-text p {
+  color: #00796B;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Conteúdo principal */
+.nos-conheca-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nos-conheca-description {
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.nos-conheca-image {
+  margin-top: 20px;
+}
+
+.nos-conheca-cat-image {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo responsivo */
+@media (min-width: 768px) {
+  .nos-conheca-header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nos-conheca-header-image {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .nos-conheca-header-text {
+    text-align: left;
+  }
+
+  .nos-conheca-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .nos-conheca-description {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .nos-conheca-cat-image {
+    width: 300px;
+  }
+}
