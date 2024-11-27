@@ -9,8 +9,11 @@ const Doacoes = () => {
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [doacaoEdit, setDoacaoEdit] = useState(null); // Para armazenar a doação que será editada
 
+    // Usando variável de ambiente para a URL do backend
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
     useEffect(() => {
-        axios.get('http://localhost:3001/doacoes')
+        axios.get(`${apiUrl}/doacoes`) // Alterado para usar a variável apiUrl
             .then((response) => setDoacoes(response.data))
             .catch((error) => console.error('Erro ao buscar doações:', error));
     }, []);
@@ -21,7 +24,7 @@ const Doacoes = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:3001/doacoes/${id}`)
+        axios.delete(`${apiUrl}/doacoes/${id}`) // Alterado para usar a variável apiUrl
             .then(() => {
                 setDoacoes((prev) => prev.filter((doacao) => doacao.id !== id));
             })
@@ -45,7 +48,7 @@ const Doacoes = () => {
             <div className="itens-grid">
                 {doacoes.map((doacao) => (
                     <div key={doacao.id} className="item-card">
-                        <img src={`http://localhost:3001${doacao.img}`} alt={doacao.nome} className="item-img" />
+                        <img src={`${apiUrl}${doacao.img}`} alt={doacao.nome} className="item-img" /> {/* Alterado para usar a variável apiUrl */}
                         <h3>{doacao.nome}</h3>
                         <p>{doacao.descricao}</p>
                         <p><strong>Preço:</strong> {doacao.preco}</p>

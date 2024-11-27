@@ -6,9 +6,12 @@ function AdoteComAmor() {
   const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Usando variável de ambiente para a URL do backend
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
   // Função para buscar os pets cadastrados
   useEffect(() => {
-    fetch('http://localhost:3001/pets')
+    fetch(`${apiUrl}/pets`) // Alterado para usar a variável apiUrl
       .then((response) => response.json())
       .then((data) => {
         setPets(data);

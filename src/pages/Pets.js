@@ -10,13 +10,16 @@ function Pets() {
   const [message, setMessage] = useState('');
   const [pets, setPets] = useState([]);
 
+  // Definindo a URL da API usando variável de ambiente
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
   // Função para adicionar um novo pet
   const handleAddPet = (e) => {
     e.preventDefault();
 
     const newPet = { nome, sexo, idade, especie, imagemUrl };
 
-    fetch('http://localhost:3001/pets', {
+    fetch(`${apiUrl}/pets`, { // Alterado para usar apiUrl
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +40,7 @@ function Pets() {
 
   // Função para excluir um pet
   const handleDeletePet = (petId) => {
-    fetch(`http://localhost:3001/pets/${petId}`, {
+    fetch(`${apiUrl}/pets/${petId}`, { // Alterado para usar apiUrl
       method: 'DELETE',
     })
       .then((response) => {
@@ -65,7 +68,7 @@ function Pets() {
 
   // Função para carregar os pets existentes
   useEffect(() => {
-    fetch('http://localhost:3001/pets')
+    fetch(`${apiUrl}/pets`) // Alterado para usar apiUrl
       .then((response) => response.json())
       .then((data) => setPets(data))
       .catch((err) => console.error('Erro ao carregar pets:', err));

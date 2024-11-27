@@ -7,9 +7,12 @@ function Voluntarios() {
   const [voluntarios, setVoluntarios] = useState([]);
   const [isFormVisible, setIsFormVisible] = useState(false);
 
+  // Definindo a URL da API usando variável de ambiente
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
   // Função para buscar os voluntários cadastrados
   useEffect(() => {
-    fetch('http://localhost:3001/voluntarios')
+    fetch(`${apiUrl}/voluntarios`) // Alterado para usar apiUrl
       .then((response) => response.json())
       .then((data) => setVoluntarios(data))
       .catch((err) => console.error('Erro ao buscar voluntários:', err));
